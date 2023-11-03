@@ -1,0 +1,73 @@
+version: 1
+
+models:
+  - name: stg_orders
+    description: This table contains information about customer orders.
+
+    columns:
+      - name: order_key
+        description: Primary key of the orders table.
+        tests:
+          - unique
+          - not_null
+
+      - name: order_cust_key
+        description: Foreign key to the customers table.
+
+
+      - name: order_status
+        description: Status of the order.
+
+      - name: order_total_price
+        description: Total price of the order.
+
+
+      - name: order_date
+        description: Date the order was placed.
+
+
+      - name: order_priority
+        description: Priority of the order.
+
+
+      - name: order_clerk
+        description: Clerk who processed the order.
+
+
+      - name: order_ship_priority
+        description: Priority of the shipment.
+
+
+      - name: order_comment
+        description: Comment about the order.
+ 
+  - name: stg_customer
+    description: This table contains information about customers.
+
+    columns:
+      - name: cust_key
+        description: Customer key
+        tests:
+          - unique
+          - not_null
+
+      - name: cust_name
+        description: Customer name
+
+      - name: cust_address
+        description: Customer address
+
+      - name: cust_nation_key
+        description: Customer nation key
+
+      - name: cust_phone
+        description: Customer phone number
+
+      - name: cust_account_balance
+        description: Customer account balance
+
+      - name: cust_market_segment
+        description: Customer market segment
+
+      - name: cust_comment
+        description: Customer comment
