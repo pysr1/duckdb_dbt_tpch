@@ -11,10 +11,12 @@ lineitem as (
 )
 
 
+
+
 SELECT
-lineitem.*, 
-orders.*,
-customers.*
+{{ dbt_utils.star(from=ref('stg_lineitem'))}},
+{{ dbt_utils.star(from=ref('stg_orders'))}},
+{{ dbt_utils.star(from=ref('stg_customer'))}},
 from lineitem
 left join orders 
 on lineitem.lineitem_order_key = orders.order_key  
