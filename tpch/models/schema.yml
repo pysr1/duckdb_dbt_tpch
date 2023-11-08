@@ -1,0 +1,81 @@
+version: 2
+models:
+  - name: order_info_wide
+    description: |
+      This table joins the lineitem, orders, and customers tables from the TPC-H benchmark.
+    columns:
+      - name: lineitem_key
+        description: The primary key of the lineitem table.
+        tests:
+          - unique
+          - not_null
+      - name: lineitem_order_key
+        description: The foreign key that references the order_key column in the orders table.
+      - name: lineitem_part_key
+        description: The foreign key that references the part_key column in the partsupp table.
+      - name: lineitem_supplied_key
+        description: The foreign key that references the supplier_key column in the suppliers table.
+      - name: lineitem_linenumber
+        description: The line number of the line item.
+      - name: lineitem_quantity
+        description: The quantity of the line item.
+      - name: lineitem_extended_price
+        description: The extended price of the line item.
+      - name: lineitem_discount
+        description: The discount on the line item.
+      - name: lineitem_tax
+        description: The tax on the line item.
+      - name: lineitem_line_total
+        description: The total price of the line item.
+      - name: lineitem_line_total_tax
+        description: The total tax on the line item.
+      - name: lineitem_return_flag
+        description: A flag that indicates whether the line item has been returned.
+      - name: lineitem_line_status
+        description: The status of the line item.
+      - name: lineitem_ship_date
+        description: The date the line item was shipped.
+      - name: lineitem_commit_date
+        description: The date the line item was committed.
+      - name: lineitem_receipt_date
+        description: The date the line item was received.
+      - name: lineitem_ship_instruct
+        description: The shipping instructions for the line item.
+      - name: lineitem_ship_mode
+        description: The shipping mode for the line item.
+      - name: lineitem_comment
+        description: Comments about the line item.
+      - name: order_key
+        description: The primary key of the orders table.
+      - name: order_cust_key
+        description: The foreign key that references the cust_key column in the customers table.
+      - name: order_status
+        description: The status of the order.
+      - name: order_total_price
+        description: The total price of the order.
+      - name: order_date
+        description: The date the order was placed.
+      - name: order_priority
+        description: The priority of the order.
+      - name: order_clerk
+        description: The clerk who processed the order.
+      - name: order_ship_priority
+        description: The priority of the order for shipping.
+      - name: order_comment
+        description: Comments about the order.
+      - name: cust_key
+        description: The primary key of the customers table.
+      - name: cust_name
+        description: The name of the customer.
+      - name: cust_address
+        description: The address of the customer.
+      - name: cust_nation_key
+        description: The foreign key that references the nation_key column in the nation table.
+      - name: cust_phone
+        description: The phone number of the customer.
+      - name: cust_account_balance
+        description: The account balance of the customer.
+      - name: cust_market_segment
+        description: The market segment of the customer.
+      - name: cust_comment
+        description: Comments about the customer.
