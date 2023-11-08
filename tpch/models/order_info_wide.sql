@@ -1,3 +1,6 @@
+{{ config(materialized='external', location='order_info_wide.parquet') }}
+
+
 with orders as (
     SELECT * FROM {{ ref('stg_orders') }}
 ),

@@ -24,8 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# on start install the tpch extension and generate the dataset
 on-run-start: "install tpch; load tpch;CALL dbgen(sf=0.01);"
+# on run end delete the dataset. The reason this is done is because there will be duplicate keys in the source tables if they are initialized more than once
 on-run-end: "drop table region;drop table nation;drop table supplier;drop table customer;drop table part;drop table partsupp;drop table orders;drop table lineitem;"
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
