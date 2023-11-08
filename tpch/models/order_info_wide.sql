@@ -10,9 +10,6 @@ lineitem as (
     SELECT * FROM {{ ref('stg_lineitem')}}
 )
 
-
-
-
 SELECT
 {{ dbt_utils.star(from=ref('stg_lineitem'))}},
 {{ dbt_utils.star(from=ref('stg_orders'))}},
