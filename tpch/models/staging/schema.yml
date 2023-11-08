@@ -71,3 +71,65 @@ models:
 
       - name: cust_comment
         description: Customer comment
+
+  - name: stg_lineitem
+    columns:
+      - name: lineitem_key
+        description: Surrogate key for the lineitem table
+        tests:
+          - unique
+          - not_null
+
+      - name: lineitem_order_key
+        description: Order key for the lineitem
+
+      - name: lineitem_part_key
+        description: Part key for the lineitem
+
+      - name: lineitem_supplied_key
+        description: Supplier key for the lineitem
+
+      - name: lineitem_linenumber
+        description: Line number for the lineitem
+
+      - name: lineitem_quantity
+        description: Quantity for the lineitem
+
+      - name: lineitem_extended_price
+        description: Extended price for the lineitem
+
+      - name: lineitem_discount
+        description: Discount for the lineitem
+
+      - name: lineitem_tax
+        description: Tax for the lineitem
+
+      - name: lineitem_line_total
+        description: Line total for the lineitem
+
+      - name: lineitem_line_total_tax
+        description: Line total tax for the lineitem
+
+      - name: lineitem_return_flag
+        description: Return flag for the lineitem
+
+      - name: lineitem_line_status
+        description: Line status for the lineitem
+
+      - name: lineitem_ship_date
+        description: Ship date for the lineitem
+
+      - name: lineitem_commit_date
+        description: Commit date for the lineitem
+
+      - name: lineitem_receipt_date
+        description: Receipt date for the lineitem
+
+      - name: lineitem_ship_instruct
+        description: Ship instructions for the lineitem
+
+      - name: lineitem_ship_mode
+        description: Ship mode for the lineitem
+
+      - name: lineitem_comment
+        description: Comment for the lineitem

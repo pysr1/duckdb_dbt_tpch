@@ -5,6 +5,7 @@ as (
    )
 
 SELECT 
+    {{ dbt_utils.generate_surrogate_key(['l_orderkey', 'l_linenumber']) }} as lineitem_key,
     l_orderkey as lineitem_order_key, 
     l_partkey as lineitem_part_key, 
     l_suppkey as lineitem_supplied_key,
