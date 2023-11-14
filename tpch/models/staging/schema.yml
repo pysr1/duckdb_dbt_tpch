@@ -210,7 +210,27 @@ models:
     columns:
         - name: region_key
           description: Primary key of the table.
+
         - name: region_name
           description: Name of the region.
+          
         - name: region_comment
           description: Comment of the region.
+
+
+  - name: part_suppliers
+    columns:
+        - name: part_supplier_part_key
+          description: Primary key of the table.
+
+        - name: part_supplier_supplier_key
+          description: Foreign key to the suppliers table.
+
+        - name: part_supplier_available_quantity
+          description: Quantity of the part available from the supplier.
+
+        - name: part_supplier_cost
+          description: Cost of the part from the supplier.
+
+        - name: part_supplier_comment
+          description: Comment about the part-supplier relationship.

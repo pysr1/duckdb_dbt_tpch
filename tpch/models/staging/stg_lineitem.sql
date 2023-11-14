@@ -16,7 +16,7 @@ SELECT
     l_discount as lineitem_discount, 
     l_tax as lineitem_tax, 
     (l_extendedprice *  (1 - l_discount)) as lineitem_line_total,
-    ((l_extendedprice *  (1 - l_discount)) * (1 + l_tax)) as lineitem_line_total_tax,
+    ((l_extendedprice * (1 - l_discount)) * (1 + l_tax)) as lineitem_line_total_tax,
     l_returnflag as lineitem_return_flag,
     l_linestatus as lineitem_line_status,
     l_shipmode as lineitem_ship_mode,
