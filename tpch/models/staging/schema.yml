@@ -205,3 +205,12 @@ models:
 
         - name: supplier_comment
           description: Description of the supplier.
+
+  - name: stg_region
+    columns:
+        - name: region_key
+          description: Primary key of the table.
+        - name: region_name
+          description: Name of the region.
+        - name: region_comment
+          description: Comment of the region.
