@@ -1,4 +1,4 @@
-version: 1
+version: 2
 
 models:
   - name: stg_orders
@@ -151,9 +151,8 @@ models:
       - name: nation_comment
         description: Comment for the nation.
 
-    tables:
-    - name: parts
-      columns:
+  - name: stg_part
+    columns:
         - name: part_key
           description: Primary key of the table.
           tests:
@@ -183,3 +182,26 @@ models:
 
         - name: part_comment
           description: xomment for the part.
+
+  - name: stg_supplier
+    columns:
+        - name: supplier_key
+          description: Primary key of the table.
+
+        - name: supplier_name
+          description: Name of the supplier.
+
+        - name: supplier_address
+          description: Address of the supplier.
+
+        - name: supplier_nation_key
+          description: Foreign key to the nations table.
+
+        - name: supplier_phone
+          description: Phone number of the supplier.
+
+        - name: supplier_account_balance
+          description: Account balance of the supplier.
+
+        - name: supplier_comment
+          description: Description of the supplier.

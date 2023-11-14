@@ -10,3 +10,4 @@ sources:
       - name: lineitem
       - name: nation
       - name: part
+      - name: supplier
