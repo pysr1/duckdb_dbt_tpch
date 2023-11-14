@@ -1,7 +1,7 @@
 with source
 as (
     select *
-    from {{ source('dev', 'orders') }}
+    from {{ source('tpch', 'orders') }}
     )
 
 SELECT o_orderkey as order_key,

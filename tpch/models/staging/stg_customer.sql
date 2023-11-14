@@ -1,7 +1,7 @@
 with source
 as (
     SELECT *
-    FROM {{ source('dev', 'customer') }}
+    FROM {{ source('tpch', 'customer') }}
    )
 
 SELECT c_custkey as cust_key,

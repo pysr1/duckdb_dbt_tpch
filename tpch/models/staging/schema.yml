@@ -133,3 +133,53 @@ models:
 
       - name: lineitem_comment
         description: Comment for the lineitem
+
+  - name: stg_nation
+    columns:
+      - name: nation_key
+        description: Primary key of the table.
+        tests:
+          - unique
+          - not_null
+
+      - name: nation_name
+        description: Name of the nation.
+
+      - name: nation_region_key
+        description: Foreign key to the regions table.
+
+      - name: nation_comment
+        description: Comment for the nation.
+
+    tables:
+    - name: parts
+      columns:
+        - name: part_key
+          description: Primary key of the table.
+          tests:
+            - unique
+            - not_null
+
+        - name: part_name
+          description: Name of the part.
+
+        - name: part_mrgr
+          description: Manufacturer of the part.
+
+        - name: part_brand
+          description: Brand of the part.
+
+        - name: part_type
+          description: Type of the part.
+
+        - name: part_size
+          description: Size of the part.
+
+        - name: part_container
+          description: Container that the part is stored in.
+
+        - name: part_retail_price
+          description: Retail price of the part.
+
+        - name: part_comment
+          description: xomment for the part.

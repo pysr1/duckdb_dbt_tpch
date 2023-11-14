@@ -1,7 +1,7 @@
 with source 
 as (
     SELECT *
-    FROM {{ source('dev', 'lineitem') }}
+    FROM {{ source('tpch', 'lineitem') }}
    )
 
 SELECT 
@@ -19,10 +19,10 @@ SELECT
     ((l_extendedprice *  (1 - l_discount)) * (1 + l_tax)) as lineitem_line_total_tax,
     l_returnflag as lineitem_return_flag,
     l_linestatus as lineitem_line_status,
+    l_shipmode as lineitem_ship_mode,
+    l_comment as lineitem_comment,
+    l_shipinstruct as lineitem_ship_instruct,
     l_shipdate as lineitem_ship_date, 
     l_commitdate as lineitem_commit_date, 
-    l_receiptdate as lineitem_receipt_date,
-    l_shipinstruct as lineitem_ship_instruct,
-    l_shipmode as lineitem_ship_mode,
-    l_comment as lineitem_comment
+    l_receiptdate as lineitem_receipt_date
 from source
