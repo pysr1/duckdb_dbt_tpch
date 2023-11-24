@@ -1,5 +1,3 @@
----{% set date_cols = ['order_date', 'lineitem_ship_date', 'lineitem_commit_date'] %}
-{% set cols = ['r', 'f', 'm'] %}
 
 with orders as (
     SELECT * FROM {{ ref('stg_orders') }}
