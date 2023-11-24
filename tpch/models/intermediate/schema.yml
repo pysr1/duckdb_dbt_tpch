@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: order_info_wide
+  - name: int_order_linetime_joined
     description: This table joins the lineitem, orders, and customers tables from the TPC-H benchmark.
     columns:
       - name: lineitem_key
