@@ -23,7 +23,7 @@ SELECT
     year({{ col }} ) as {{ col }}_year,
     month({{ col }} ) as {{ col }}_month,
     day({{ col }} ) as {{ col }}_day,
-    quarter({{ col }} ) as {{ col }}_year,
+    quarter({{ col }} ) as {{ col }}_quarter,
 {% endfor -%}
 
 
